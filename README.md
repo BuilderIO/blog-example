@@ -2,7 +2,7 @@
 
 This is an example of a blog with [Builder.io](https://www.builder.io/m/developers), [Tailwind](https://github.com/tailwindlabs/tailwindcss), and [Next.js](https://github.com/vercel/next.js/),
 
-We forked [TailwindBlog](https://github.com/timlrx/tailwind-nextjs-starter-blog) and added a Builder.io integation [here](https://github.com/BuilderIO/blog-example/blob/main/pages/blog/%5B...slug%5D.js#L1)
+We forked [TailwindBlog](https://github.com/timlrx/tailwind-nextjs-starter-blog) and added a Builder.io integation [here](https://github.com/BuilderIO/blog-example/blob/main/pages/blog/%5B...slug%5D.js#L1), and configured some custom components [here](./builder.config.js)
 
 ## Getting Started
 

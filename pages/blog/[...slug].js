@@ -1,5 +1,6 @@
 import PageTitle from '@/components/PageTitle'
 import { BuilderComponent, BuilderContent, builder } from '@builder.io/react'
+import '../../builder.config'
 
 builder.init('ccda6c7abf4c4b8195aa67d47de420dd')
 

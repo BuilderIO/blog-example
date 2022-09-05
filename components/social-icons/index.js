@@ -4,6 +4,7 @@ import Facebook from './facebook.svg'
 import Youtube from './youtube.svg'
 import Linkedin from './linkedin.svg'
 import Twitter from './twitter.svg'
+import siteMetadata from '@/data/siteMetadata'
 
 // Icons taken from: https://simpleicons.org/
 
@@ -38,3 +39,20 @@ const SocialIcon = ({ kind, href, size = 8 }) => {
 }
 
 export default SocialIcon
+
+export function SocialIconRow() {
+  return (
+    <footer>
+      <div className="mt-16 flex flex-col items-center">
+        <div className="mb-3 flex space-x-4">
+          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size="6" />
+          <SocialIcon kind="github" href={siteMetadata.github} size="6" />
+          <SocialIcon kind="facebook" href={siteMetadata.facebook} size="6" />
+          <SocialIcon kind="youtube" href={siteMetadata.youtube} size="6" />
+          <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" />
+          <SocialIcon kind="twitter" href={siteMetadata.twitter} size="6" />
+        </div>
+      </div>
+    </footer>
+  )
+}
