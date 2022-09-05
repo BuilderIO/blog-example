@@ -90,6 +90,51 @@ Builder.registerComponent(
   }
 )
 
+Builder.registerComponent(
+  dynamic(() => import('./components/TOCInline')),
+  {
+    name: 'TableOfContents',
+    image: 'https://tabler-icons.io/static/tabler-icons/icons-png/list.png',
+    inputs: [
+      {
+        name: 'toc',
+        friendlyName: 'contents',
+        type: 'list',
+        defaultValue: [
+          {
+            value: 'Hello world',
+            href: '#hello-world',
+            depth: 1,
+          },
+        ],
+        subFields: [
+          {
+            name: 'value',
+            friendlyName: 'title',
+            type: 'string',
+            required: true,
+            defaultValue: 'Hello World',
+          },
+          {
+            name: 'url',
+            type: 'string',
+            defaultValue: '#hello-world',
+            required: true,
+          },
+          {
+            name: 'depth',
+            type: 'number',
+            defaultValue: 1,
+            step: 1,
+            min: 1,
+            max: 10,
+          },
+        ],
+      },
+    ],
+  }
+)
+
 Builder.register('insertMenu', {
   name: 'Blog Post Components',
   items: [
@@ -98,5 +143,6 @@ Builder.register('insertMenu', {
     { name: 'Code' },
     { name: 'PageTitle' },
     { name: 'SocialIcons' },
+    { name: 'TableOfContents' },
   ],
 })
