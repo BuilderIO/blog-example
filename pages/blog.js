@@ -18,11 +18,11 @@ export async function getStaticProps() {
       initialDisplayPosts,
       posts,
       pagination,
-      // TODO: remove this when Builder.io app updated to handle demoPath param correctly
-      redirect: {
-        destination: '/blog/example',
-        permanent: false,
-      },
+    },
+    // TODO: remove this when Builder.io app updated to handle demoPath param correctly
+    redirect: {
+      destination: '/blog/example',
+      permanent: false,
     },
   }
 }
