@@ -4,7 +4,9 @@ This is an example of a blog with [Builder.io](https://www.builder.io/m/develope
 
 We forked [TailwindBlog](https://github.com/timlrx/tailwind-nextjs-starter-blog) and added a Builder.io integation [here](https://github.com/BuilderIO/blog-example/blob/main/pages/blog/%5B...slug%5D.js#L1), and configured some custom components [here](./builder.config.js)
 
-[Try it yourself!](https://builder.io/demo/blog/example?demoHost=blog-example-builder-io.vercel.app&demoModel=blog-post&demoPath=/blog/example)
+[Try it yourself here!](https://builder.io/demo/blog/example?demoHost=blog-example-builder-io.vercel.app&demoModel=blog-post&demoPath=/blog/example)
+
+![Gif of using this example](https://user-images.githubusercontent.com/844291/188522506-1b3c77d7-6a17-471d-bff6-ba36fc097892.gif)
 
 ## Getting Started
 
