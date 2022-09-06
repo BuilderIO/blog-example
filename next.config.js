@@ -69,6 +69,17 @@ module.exports = withBundleAnalyzer({
       },
     ]
   },
+  async redirects() {
+    return [
+      // TODO: remove this when Builder.io app updated to handle demoPath param correctly
+      {
+        source: '/blog',
+        destination: '/blog/example',
+        permanent: true,
+      },
+    ]
+  },
+
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
       test: /\.svg$/,
