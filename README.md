@@ -19,3 +19,5 @@ We forked [TailwindBlog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
 7. Open Builder.io and make some blog posts!
 
 To go live, be sure to also add your public API key (find in your [account settings](builder.io/account)) [here](https://github.com/BuilderIO/blog-example/blob/main/pages/blog/%5B...slug%5D.js#L4). You additionally may want to add some [custom fields](https://www.builder.io/c/docs/custom-fields) for the blog post `title` and `slug`
+
+> ℹ️ **For an in-depth walkthrough on how to create a blog with Builder.io, see our [full tutorial](https://www.builder.io/blog/creating-blog)**
