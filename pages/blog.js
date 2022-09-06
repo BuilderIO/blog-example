@@ -13,7 +13,18 @@ export async function getStaticProps() {
     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
   }
 
-  return { props: { initialDisplayPosts, posts, pagination } }
+  return {
+    props: {
+      initialDisplayPosts,
+      posts,
+      pagination,
+      // TODO: remove this when Builder.io app updated to handle demoPath param correctly
+      redirect: {
+        destination: '/blog/example',
+        permanent: false,
+      },
+    },
+  }
 }
 
 export default function Blog({ posts, initialDisplayPosts, pagination }) {
