@@ -36,6 +36,7 @@ const LayoutWrapper = ({ children }) => {
                   <a
                     href={link.href}
                     key={link.href}
+                    target="_blank"
                     onClick={() => {
                       // Allow opening this from the Builder.io editor
                       if (Builder.isEditing) {
@@ -43,6 +44,7 @@ const LayoutWrapper = ({ children }) => {
                       }
                     }}
                     className="p-1 font-medium text-primary-500 sm:p-4"
+                    rel="noreferrer"
                   >
                     {link.title}
                   </a>
