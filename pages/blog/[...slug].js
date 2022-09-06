@@ -31,16 +31,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Blog({ post }) {
-  return (
-    <>
-      <BuilderContent model="blog-post" content={post}>
-        {(data, content) => (
-          <>
-            <PageTitle>{data?.title}</PageTitle>
-            <BuilderComponent model="blog-post" content={content} />
-          </>
-        )}
-      </BuilderContent>
-    </>
-  )
+  // TODO: add your own 404 page/handling like described
+  // here: https://www.builder.io/c/docs/integrating-builder-pages
+  return <BuilderComponent model="blog-post" content={post} />
 }
