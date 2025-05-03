@@ -1,38 +1,15 @@
 import Link from './Link'
+import PropTypes from 'prop-types'
 
 export default function ShopByCategory({
   title = 'SHOP BY CATEGORY',
-  categories = [
-    {
-      name: 'Women',
-      image:
-        'https://cdn.builder.io/api/v1/image/assets/77864f6bd1864e1f80adffa8c03ae9d0/a38c5259adc22ec1ed5e60e564e554708e5bbc8f',
-    },
-    {
-      name: 'Men',
-      image:
-        'https://cdn.builder.io/api/v1/image/assets/77864f6bd1864e1f80adffa8c03ae9d0/a38c5259adc22ec1ed5e60e564e554708e5bbc8f',
-    },
-    {
-      name: 'Accessories',
-      image:
-        'https://cdn.builder.io/api/v1/image/assets/77864f6bd1864e1f80adffa8c03ae9d0/a38c5259adc22ec1ed5e60e564e554708e5bbc8f',
-    },
-    {
-      name: 'Sale',
-      image:
-        'https://cdn.builder.io/api/v1/image/assets/77864f6bd1864e1f80adffa8c03ae9d0/a38c5259adc22ec1ed5e60e564e554708e5bbc8f',
-    },
-  ],
+  categories = [],
   buttonText = 'SHOP ALL',
   buttonLink = '/shop',
-  className = '',
 }) {
   return (
-    <div
-      className={`mx-auto mt-20 flex max-w-7xl flex-col items-center justify-center text-sm font-semibold text-black ${className}`}
-    >
-      {title && <div className="text-center text-2xl tracking-widest">{title}</div>}
+    <div className="mx-auto mt-20 flex max-w-7xl flex-col items-center justify-center text-sm font-semibold text-black">
+      <div className="text-center text-2xl tracking-widest">{title}</div>
 
       <div className="mt-16 flex flex-wrap items-start justify-start gap-8">
         {categories.map((category, index) => (
@@ -56,7 +33,7 @@ export default function ShopByCategory({
         ))}
       </div>
 
-      {buttonText && buttonLink && (
+      {buttonText && (
         <div className="mt-16">
           <Link href={buttonLink}>
             <button className="bg-black px-5 py-2.5 tracking-widest text-white">
@@ -67,4 +44,16 @@ export default function ShopByCategory({
       )}
     </div>
   )
+}
+
+ShopByCategory.propTypes = {
+  title: PropTypes.string,
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+    })
+  ),
+  buttonText: PropTypes.string,
+  buttonLink: PropTypes.string,
 }

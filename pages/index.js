@@ -97,7 +97,33 @@ export default function Home({ posts }) {
           <NewsletterForm />
         </div>
       )}
-      <ShopByCategory />
+      <ShopByCategory
+        title="SHOP BY CATEGORY"
+        categories={[
+          {
+            name: 'Women',
+            image:
+              'https://cdn.builder.io/api/v1/image/assets/77864f6bd1864e1f80adffa8c03ae9d0/a38c5259adc22ec1ed5e60e564e554708e5bbc8f',
+          },
+          {
+            name: 'Men',
+            image:
+              'https://cdn.builder.io/api/v1/image/assets/77864f6bd1864e1f80adffa8c03ae9d0/a38c5259adc22ec1ed5e60e564e554708e5bbc8f',
+          },
+          {
+            name: 'Accessories',
+            image:
+              'https://cdn.builder.io/api/v1/image/assets/77864f6bd1864e1f80adffa8c03ae9d0/a38c5259adc22ec1ed5e60e564e554708e5bbc8f',
+          },
+          {
+            name: 'Sale',
+            image:
+              'https://cdn.builder.io/api/v1/image/assets/77864f6bd1864e1f80adffa8c03ae9d0/a38c5259adc22ec1ed5e60e564e554708e5bbc8f',
+          },
+        ]}
+        buttonText="SHOP ALL"
+        buttonLink="/shop"
+      />
     </>
   )
 }
