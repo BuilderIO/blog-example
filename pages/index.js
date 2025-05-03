@@ -6,6 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 
 import NewsletterForm from '@/components/NewsletterForm'
+import ShopByCategory from '@/components/ShopByCategory'
 
 const MAX_DISPLAY = 5
 
@@ -96,6 +97,7 @@ export default function Home({ posts }) {
           <NewsletterForm />
         </div>
       )}
+      <ShopByCategory />
     </>
   )
 }
