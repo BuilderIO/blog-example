@@ -1,8 +1,8 @@
 import Link from './Link'
-import Image from './Image'
 
-export default function ShopByCategory() {
-  const categories = [
+export default function ShopByCategory({
+  title = 'SHOP BY CATEGORY',
+  categories = [
     {
       name: 'Women',
       image:
@@ -23,11 +23,16 @@ export default function ShopByCategory() {
       image:
         'https://cdn.builder.io/api/v1/image/assets/77864f6bd1864e1f80adffa8c03ae9d0/a38c5259adc22ec1ed5e60e564e554708e5bbc8f',
     },
-  ]
-
+  ],
+  buttonText = 'SHOP ALL',
+  buttonLink = '/shop',
+  className = '',
+}) {
   return (
-    <div className="mx-auto mt-20 flex max-w-7xl flex-col items-center justify-center text-sm font-semibold text-black">
-      <div className="text-center text-2xl tracking-widest">SHOP BY CATEGORY</div>
+    <div
+      className={`mx-auto mt-20 flex max-w-7xl flex-col items-center justify-center text-sm font-semibold text-black ${className}`}
+    >
+      {title && <div className="text-center text-2xl tracking-widest">{title}</div>}
 
       <div className="mt-16 flex flex-wrap items-start justify-start gap-8">
         {categories.map((category, index) => (
@@ -51,11 +56,15 @@ export default function ShopByCategory() {
         ))}
       </div>
 
-      <div className="mt-16">
-        <Link href="/shop">
-          <button className="bg-black px-5 py-2.5 tracking-widest text-white">SHOP ALL</button>
-        </Link>
-      </div>
+      {buttonText && buttonLink && (
+        <div className="mt-16">
+          <Link href={buttonLink}>
+            <button className="bg-black px-5 py-2.5 tracking-widest text-white">
+              {buttonText}
+            </button>
+          </Link>
+        </div>
+      )}
     </div>
   )
 }
